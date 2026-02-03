@@ -17,8 +17,11 @@ brew install --cask ghostty
 # Neovim プラグインの依存
 brew install ripgrep      # telescope live_grep 用
 brew install lazygit      # Git TUI
-brew install node         # markdown-preview 用
 brew install im-select    # IME 切り替え用（jj/kk でESC時に英語入力に切り替え）
+
+# Node.js（markdown-preview 用）
+# 各自の環境に合わせてインストールしてください
+# 例: Volta, nvm, nodenv, brew など
 
 # フォント
 brew tap homebrew/cask-fonts
