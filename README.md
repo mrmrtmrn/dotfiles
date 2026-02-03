@@ -22,12 +22,22 @@ brew install im-select    # IME 切り替え用（jj/kk でESC時に英語入力
 
 # フォント
 brew tap homebrew/cask-fonts
-brew install --cask font-plemol-jp-nf
+brew install --cask font-plemol-jp       # 通常版
+brew install --cask font-plemol-jp-hs    # Hidden Space版（全角スペース非表示）
+brew install --cask font-plemol-jp-nf    # Nerd Fonts版（アイコン対応）
 ```
 
 ### フォント設定
 
-Ghostty で `PlemolJP Console NF` を使用しています。上記でインストールされます。
+[PlemolJP](https://github.com/yuru7/PlemolJP) を使用しています。
+
+| フォント | 説明 |
+|----------|------|
+| PlemolJP | 通常版（半角1:全角2） |
+| PlemolJP HS | 全角スペースの可視化を削除 |
+| PlemolJP NF | Nerd Fonts対応（アイコン表示用） |
+
+Ghostty では `PlemolJP Console NF` を設定しています。
 
 ## インストール
 
