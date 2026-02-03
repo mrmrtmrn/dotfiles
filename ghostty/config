@@ -1,0 +1,67 @@
+# MySettings
+
+# Theme
+theme = tokyonight
+
+# 分割境界線の色
+split-divider-color = #7dcfff
+
+# Font
+font-family = "PlemolJP Console NF"
+font-size = 18
+
+# 行間を少し広げてモダンにする（10%〜20%くらいが人気）
+adjust-cell-height = 10%
+
+# --- ウィンドウ・透明度 ---
+# ウィンドウ内の余白を入れて圧迫感を減らす
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+
+# --- Macネイティブな挙動 ---
+# タイトルバーを透明にしてスッキリさせる
+macos-titlebar-style = transparent
+# フルスクリーン時にMac標準の挙動にする
+macos-window-shadow = true
+# 入力中はマウスカーソルを隠す
+mouse-hide-while-typing = true
+
+# --- 操作性 ---
+# OptionキーをAltとして扱う（Vimなどのショートカット用）
+macos-option-as-alt = true
+# 選択しただけでクリップボードにコピー
+copy-on-select = clipboard
+# クリップボードの読み書きを許可
+clipboard-read = allow
+clipboard-write = allow
+
+# --- キーバインド設定（画面分割スペシャル） ---
+# 【重要】Cmd+Enter で「下に」分割
+keybind = cmd+enter=new_split:down
+
+# Cmd+Shift+Enter で「右に」分割
+keybind = cmd+shift+enter=new_split:right
+
+# Cmd + hjkl で分割した画面を「移動」
+# ※ Cmd+H は macOS の「アプリを隠す」を上書き
+keybind = cmd+h=goto_split:left
+keybind = cmd+l=goto_split:right
+keybind = cmd+k=goto_split:top
+keybind = cmd+j=goto_split:bottom
+
+# Cmd + Shift + 矢印キー で分割サイズを「調整」
+keybind = cmd+shift+left=resize_split:left,20
+keybind = cmd+shift+right=resize_split:right,20
+keybind = cmd+shift+up=resize_split:up,20
+keybind = cmd+shift+down=resize_split:down,20
+
+# Cmd + W で現在の「ペイン（分割）」を閉じる
+# （デフォルトだとウィンドウごと閉じてしまうことがあるため、ペインを閉じる設定を優先）
+keybind = cmd+w=close_surface
+
+# バックスラッシュ入力（日本語キーボード対策）
+keybind = ¥=text:\\
+
+# ウィンドウの状態を保存する
+window-save-state = always
