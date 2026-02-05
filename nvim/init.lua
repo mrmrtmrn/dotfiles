@@ -164,7 +164,7 @@ require("lazy").setup({
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
-    build = "cd app && npm install",
+    build = "cd app && npx --yes yarn install",
     keys = {
       { "<leader>mp", "<cmd>MarkdownPreviewToggle<CR>", desc = "Markdown preview" },
     },
@@ -199,6 +199,18 @@ require("lazy").setup({
       vim.g.vim_markdown_folding_disabled = 1
       vim.g.vim_markdown_auto_insert_bullets = 0  -- 箇条書きはbullets.vimに任せる
       vim.g.vim_markdown_new_list_item_indent = 0
+    end,
+  },
+
+  -- ==========================================
+  -- emmet-vim (HTML/CSS省略記法)
+  -- ==========================================
+  {
+    "mattn/emmet-vim",
+    ft = { "html", "css", "javascriptreact", "typescriptreact", "vue", "svelte" },
+    config = function()
+      -- Emmet展開キー: <C-y>, (Ctrl+y, カンマ)
+      vim.g.user_emmet_leader_key = "<C-y>"
     end,
   },
 
