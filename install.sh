@@ -36,6 +36,7 @@ backup_and_link "$DOTFILES_DIR/ghostty" "$HOME/.config/ghostty"
 # Claude Code
 mkdir -p "$HOME/.claude"
 backup_and_link "$DOTFILES_DIR/claude/skills" "$HOME/.claude/skills"
+backup_and_link "$DOTFILES_DIR/claude/hooks" "$HOME/.claude/hooks"
 backup_and_link "$DOTFILES_DIR/claude/settings.local.json" "$HOME/.claude/settings.local.json"
 
 echo ""
