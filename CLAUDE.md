@@ -23,7 +23,8 @@ nvim
 - `nvim/lazy-lock.json` - プラグインのバージョンロックファイル（自動生成）
 - `ghostty/config` - Ghostty ターミナルの設定
 - `claude/skills/` - Claude Code のカスタムスキル（全プロジェクト共通）
-- `claude/settings.local.json` - Claude Code のユーザー設定（許可コマンドなど）
+- `claude/hooks/` - Claude Code の PreToolUse フック（git commit/push 前のセキュリティチェック）
+- `claude/settings.local.json` - Claude Code のユーザー設定（許可コマンド、hooks 設定など）
 - `install.sh` - シンボリックリンク作成スクリプト（既存設定は `~/.dotfiles_backup/` にバックアップ）
 
 ### 設計方針
