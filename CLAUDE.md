@@ -22,6 +22,8 @@ nvim
 - `nvim/init.lua` - lazy.nvim を使った単一ファイルの Neovim 設定
 - `nvim/lazy-lock.json` - プラグインのバージョンロックファイル（自動生成）
 - `ghostty/config` - Ghostty ターミナルの設定
+- `claude/skills/` - Claude Code のカスタムスキル（全プロジェクト共通）
+- `claude/settings.local.json` - Claude Code のユーザー設定（許可コマンドなど）
 - `install.sh` - シンボリックリンク作成スクリプト（既存設定は `~/.dotfiles_backup/` にバックアップ）
 
 ### 設計方針

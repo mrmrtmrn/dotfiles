@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(volta pin:*)",
+      "Bash(mkdir:*)",
+      "Bash(test:*)",
+      "Bash(git commit:*)",
+      "WebFetch(domain:www.cho-kaguyahime.com)"
+    ]
+  }
+}
