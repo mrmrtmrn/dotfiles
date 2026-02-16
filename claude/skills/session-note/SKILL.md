@@ -14,7 +14,9 @@ description: "AIコーディングCLIツール(Claude Code, Gemini CLI, Codex等
 
 ## 定数
 
-```
+**重要**: 日付は必ず以下の `date` コマンドを実際にBashで実行して取得すること。セッションのシステムコンテキスト（currentDate等）はセッション開始時の日付であり、日をまたいだ場合に正しくないため使用禁止。
+
+```bash
 TIL_DIR=$HOME/repository/github.com/mrmrtmrn/TIL
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
@@ -95,8 +97,17 @@ mkdir -p $TARGET_DIR
 
 ```bash
 git -C $TIL_DIR add Tech/AI-Sessions/
-git -C $TIL_DIR commit -m "feat: $TODAY の AI セッションノートを追加"
+git -C $TIL_DIR commit -m "feat: $TODAY の AI セッションノートを追加
+
+- トピック1のタイトル
+- トピック2のタイトル
+- ..."
 ```
+
+コミットメッセージは複数行で記述する：
+- 1行目: `feat: $TODAY の AI セッションノートを追加`（タイトル行）
+- 空行
+- 3行目以降: 今回追記・新規作成したトピックのタイトルを箇条書きで列挙する
 
 ### ステップ 5: 完了報告
 
