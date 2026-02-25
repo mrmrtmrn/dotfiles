@@ -4,7 +4,7 @@ description: "AIコーディングCLIツール(Claude Code, Gemini CLI, Codex等
 
 # /session-note
 
-このセッションで学んだ**汎用的な技術知識**を抽出し、TILリポジトリの `Tech/AI-Sessions/` に記録する。
+このセッションで学んだ**汎用的な技術知識**を抽出し、TILリポジトリの `docs/Tech/AI-Sessions/` に記録する。
 プロジェクト固有の情報は除外し、他の場面でも再利用可能な形に汎化すること。
 
 ## 使い方
@@ -21,7 +21,7 @@ TIL_DIR=$HOME/repository/github.com/mrmrtmrn/TIL
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
 TODAY=$(date +%Y-%m-%d)
-TARGET_DIR=$TIL_DIR/Tech/AI-Sessions/$YEAR/$MONTH
+TARGET_DIR=$TIL_DIR/docs/Tech/AI-Sessions/$YEAR/$MONTH
 TARGET_FILE=$TARGET_DIR/$TODAY.md
 ```
 
@@ -96,7 +96,7 @@ mkdir -p $TARGET_DIR
 ### ステップ 4: コミット
 
 ```bash
-git -C $TIL_DIR add Tech/AI-Sessions/
+git -C $TIL_DIR add docs/Tech/AI-Sessions/
 git -C $TIL_DIR commit -m "feat: $TODAY の AI セッションノートを追加
 
 - トピック1のタイトル
