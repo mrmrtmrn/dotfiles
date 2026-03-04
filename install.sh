@@ -40,6 +40,10 @@ backup_and_link "$DOTFILES_DIR/claude/hooks" "$HOME/.claude/hooks"
 backup_and_link "$DOTFILES_DIR/claude/settings.local.json" "$HOME/.claude/settings.local.json"
 backup_and_link "$DOTFILES_DIR/claude/statusline.sh" "$HOME/.claude/statusline.sh"
 
+# Codex CLI
+mkdir -p "$HOME/.codex/skills"
+backup_and_link "$DOTFILES_DIR/codex/skills/session-note" "$HOME/.codex/skills/session-note"
+
 echo ""
 echo "=== Setup complete! ==="
 echo ""

@@ -1,6 +1,6 @@
 # dotfiles
 
-Neovim と Ghostty の設定ファイル
+Neovim / Ghostty / Claude Code / Codex CLI の設定ファイル
 
 ## 必要なソフトウェア
 
@@ -90,12 +90,32 @@ chmod +x install.sh
 - **分割移動**: Cmd+H/J/K/L
 - **分割サイズ調整**: Cmd+Shift+矢印
 
+### Claude Code (`claude/`)
+
+- `skills/`
+- `hooks/`
+- `settings.local.json`
+- `statusline.sh`
+
+### Codex CLI (`codex/`)
+
+- `skills/session-note/`
+
 ## ディレクトリ構成
 
 ```
 dotfiles/
 ├── README.md
 ├── install.sh
+├── claude/
+│   ├── hooks/
+│   ├── skills/
+│   ├── settings.local.json
+│   └── statusline.sh
+├── codex/
+│   └── skills/
+│       └── session-note/
+│           └── SKILL.md
 ├── ghostty/
 │   └── config
 └── nvim/
