@@ -11,7 +11,7 @@ RESET='\033[0m'
 
 # --- Helpers ---
 make_bar() {
-  local pct=$1 width=${2:-15}
+  local pct=$1 width=${2:-20}
   local filled=$((pct * width / 100))
   local empty=$((width - filled))
   [ "$filled" -lt 0 ] && filled=0
@@ -140,7 +140,7 @@ if [ -f "$CACHE_FILE" ]; then
       [ -n "$FIVE_RESET_FMT" ] && FIVE_RESET_FMT="Resets ${FIVE_RESET_FMT} (Asia/Tokyo)"
     fi
 
-    echo -e "⏱ 5h  ${FIVE_COLOR}${FIVE_BAR}${RESET} ${FIVE_PCT}%  ${DIM}${FIVE_RESET_FMT}${RESET}"
+    echo -e "⏱ 5h  ${FIVE_COLOR}${FIVE_BAR}${RESET} ${FIVE_PCT}%  ${FIVE_RESET_FMT}"
   fi
 
   if [ -n "$SEVEN_UTIL" ]; then
@@ -155,6 +155,6 @@ if [ -f "$CACHE_FILE" ]; then
       [ -n "$SEVEN_RESET_FMT" ] && SEVEN_RESET_FMT="Resets ${SEVEN_RESET_FMT} (Asia/Tokyo)"
     fi
 
-    echo -e "📅 7d  ${SEVEN_COLOR}${SEVEN_BAR}${RESET} ${SEVEN_PCT}%  ${DIM}${SEVEN_RESET_FMT}${RESET}"
+    echo -e "📅 7d  ${SEVEN_COLOR}${SEVEN_BAR}${RESET} ${SEVEN_PCT}%  ${SEVEN_RESET_FMT}"
   fi
 fi
