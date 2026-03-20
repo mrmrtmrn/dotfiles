@@ -50,7 +50,7 @@ fi
 
 echo -e "$LINE1"
 
-DIR_NAME=$(basename "$PROJECT_DIR")
+DIR_NAME="${PROJECT_DIR/#$HOME/~}"
 LINE2="📁 ${DIR_NAME}"
 
 BRANCH=$(git -C "$PROJECT_DIR" branch --show-current 2>/dev/null)
