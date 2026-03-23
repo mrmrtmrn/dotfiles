@@ -63,7 +63,7 @@ echo -e "$LINE2"
 # ==============================
 # Lines 2-3: Rate limit (from stdin JSON)
 # ==============================
-FIVE_PCT=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty' 2>/dev/null)
+FIVE_PCT=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty' 2>/dev/null | cut -d. -f1)
 FIVE_RESET=$(echo "$input" | jq -r '.rate_limits.five_hour.resets_at // empty' 2>/dev/null)
 
 if [ -n "$FIVE_PCT" ]; then
@@ -79,7 +79,7 @@ if [ -n "$FIVE_PCT" ]; then
   echo -e "🕐 5h  ${FIVE_COLOR}${FIVE_BAR}${RESET} ${FIVE_PCT}%  ${FIVE_RESET_FMT}"
 fi
 
-SEVEN_PCT=$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty' 2>/dev/null)
+SEVEN_PCT=$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty' 2>/dev/null | cut -d. -f1)
 SEVEN_RESET=$(echo "$input" | jq -r '.rate_limits.seven_day.resets_at // empty' 2>/dev/null)
 
 if [ -n "$SEVEN_PCT" ]; then
