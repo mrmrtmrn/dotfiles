@@ -110,7 +110,7 @@ mkdir -p $TARGET_DIR
 
 ```bash
 git -C $TIL_DIR add docs/Tech/AI-Sessions/
-git -C $TIL_DIR commit -m "feat: $TODAY の AI セッションノートを追加
+git -C $TIL_DIR commit -m "feat: 学びのサマリ（30文字程度）
 
 - トピック1のタイトル
 - トピック2のタイトル
@@ -118,7 +118,9 @@ git -C $TIL_DIR commit -m "feat: $TODAY の AI セッションノートを追加
 ```
 
 コミットメッセージは複数行で記述する：
-- 1行目: `feat: $TODAY の AI セッションノートを追加`（タイトル行）
+- 1行目: `feat: ` に続けて、セッションで学んだ内容の簡潔なサマリ（30文字程度）。GitHub のコミット一覧で内容がわかるようにする。日付は不要（git が記録するため）
+  - 例: `feat: Go の基本構文と WebSocket チャットのアーキテクチャを学ぶ`
+  - 例: `feat: Go の GMP モデルと goroutine の内部実装を学ぶ`
 - 空行
 - 3行目以降: 今回追記・新規作成したトピックのタイトルを箇条書きで列挙する
 
