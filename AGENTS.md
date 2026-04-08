@@ -27,6 +27,11 @@ nvim
 - `Codex/settings.local.json` - Codex のユーザー設定（許可コマンド、hooks 設定など）
 - `install.sh` - シンボリックリンク作成スクリプト（既存設定は `~/.dotfiles_backup/` にバックアップ）
 
+### TIL 連携スキル
+- `codex/skills/til-send/` - TIL へ学びを送るグローバル入口
+- `codex/skills/session-note/` - `til-send` への互換用エイリアス
+- 詳細手順の正本は TIL リポジトリ側にあり、dotfiles 側では再定義しない
+
 ### 設計方針
 - **単一 init.lua**: Neovim 設定は分割せず1ファイル（約400行）に集約
 - **統一テーマ**: Neovim と Ghostty で tokyonight を使用

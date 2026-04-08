@@ -99,7 +99,8 @@ chmod +x install.sh
 
 ### Codex CLI (`codex/`)
 
-- `skills/session-note/`
+- `skills/til-send/` - TIL への記録用グローバル入口
+- `skills/session-note/` - 互換用エイリアス
 
 ## ディレクトリ構成
 
@@ -114,7 +115,9 @@ dotfiles/
 │   └── statusline.sh
 ├── codex/
 │   └── skills/
-│       └── session-note/
+│       ├── session-note/
+│       │   └── SKILL.md
+│       └── til-send/
 │           └── SKILL.md
 ├── ghostty/
 │   └── config

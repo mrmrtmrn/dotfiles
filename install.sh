@@ -13,11 +13,13 @@ BACKUP_DIR="$HOME/.dotfiles_backup/$(date +%Y%m%d_%H%M%S)"
 backup_and_link() {
   local src="$1"
   local dest="$2"
+  local backup_path
 
   if [ -e "$dest" ] || [ -L "$dest" ]; then
-    echo "Backing up $dest -> $BACKUP_DIR/"
-    mkdir -p "$BACKUP_DIR"
-    mv "$dest" "$BACKUP_DIR/"
+    backup_path="$BACKUP_DIR${dest#$HOME}"
+    echo "Backing up $dest -> $backup_path"
+    mkdir -p "$(dirname "$backup_path")"
+    mv "$dest" "$backup_path"
   fi
 
   echo "Linking $src -> $dest"
@@ -41,8 +43,8 @@ backup_and_link "$DOTFILES_DIR/claude/settings.local.json" "$HOME/.claude/settin
 backup_and_link "$DOTFILES_DIR/claude/statusline.sh" "$HOME/.claude/statusline.sh"
 
 # Codex CLI
-mkdir -p "$HOME/.codex/skills"
-backup_and_link "$DOTFILES_DIR/codex/skills/session-note" "$HOME/.codex/skills/session-note"
+mkdir -p "$HOME/.codex"
+backup_and_link "$DOTFILES_DIR/codex/skills" "$HOME/.codex/skills"
 
 echo ""
 echo "=== Setup complete! ==="
